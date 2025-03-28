@@ -29,10 +29,7 @@ public class MainActivity extends AppCompatActivity {
         window.setStatusBarColor(Color.TRANSPARENT);
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
-
-        // Mặc định hiển thị Fragment đầu tiên
         loadFragment(new HomeFragment());
-
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -51,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 if (selectedFragment != null) {
                     loadFragment(selectedFragment);
                 }
-
                 return true;
             }
         });

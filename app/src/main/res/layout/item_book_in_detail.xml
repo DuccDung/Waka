@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="4dp"
+    android:padding="4dp">
+
+    <!-- Phần ảnh bọc trong CardView -->
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+card_view:cardCornerRadius="12dp"
+card_view:cardElevation="6dp"
+card_view:cardPreventCornerOverlap="true"
+card_view:cardUseCompatPadding="true">
+
+<ImageView
+    android:id="@+id/image_characters_in_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:adjustViewBounds="true"
+    android:src="@drawable/ngontinh1" />
+</androidx.cardview.widget.CardView>
+
+    <!-- Tên sách -->
+<TextView
+android:id="@+id/book_title_in_detail"
+android:layout_width="match_parent"
+android:layout_height="30dp"
+android:text="Lịch sử Việt – Góc khuất chưa từng kể"
+android:textColor="@android:color/white"
+android:textSize="15sp"
+android:maxLines="2"
+android:ellipsize="end"
+android:gravity="center" />
+    </LinearLayout>

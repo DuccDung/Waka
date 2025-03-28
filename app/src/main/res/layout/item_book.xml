@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="160dp"
-    android:layout_height="250dp"
+    android:layout_width="120dp"
+    android:layout_height="200dp"
     card_view:cardCornerRadius="12dp"
-    card_view:cardElevation="6dp"
-    android:layout_margin="10dp">
+    card_view:cardElevation="4dp"
+    android:layout_margin="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <!-- Ảnh minh họa -->
         <ImageView
             android:id="@+id/image_characters"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ngontinh1"
             android:adjustViewBounds="true" />
@@ -26,10 +26,9 @@
             android:id="@+id/book_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
             android:text="Lịch sử Việt – Góc khuất chưa từng kể"
             android:textColor="@android:color/black"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:textStyle="bold"
             android:maxLines="2"
             android:ellipsize="end" />

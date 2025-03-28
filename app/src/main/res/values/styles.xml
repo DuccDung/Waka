@@ -4,5 +4,7 @@
         <item name="android:textSize">10sp</item>
         <item name="android:padding">0dp</item>
     </style>
-
+    <style name="CateMargin" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:layout_marginTop">50dp</item>
+    </style>
 </resources>

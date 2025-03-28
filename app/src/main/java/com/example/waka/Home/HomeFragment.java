@@ -22,6 +22,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.waka.Home.Banner.CarouselTransformer;
 import com.example.waka.Home.Banner.ImageSliderAdapter;
+import com.example.waka.Model.Author;
 import com.example.waka.Model.Book;
 import com.example.waka.R;
 
@@ -40,6 +41,14 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView rcvBookTC;
     private BookAdapter bookAdapter;
+
+    private RecyclerView rcvHorrifiedBook;
+    private BookAdapter bookHorrifiedAdapter;
+
+    private RecyclerView rcvMarketingBook;
+    private BookAdapter bookMarketingAdapter;
+    private RecyclerView rcvAuthor;
+    private AuthorAdapter authorAdapter;
     private List<Book> books = new ArrayList<>();
 
     @Nullable
@@ -50,9 +59,21 @@ public class HomeFragment extends Fragment {
 
 
 
-        // RecyclerView
+        // RecyclerView Cate
         recyclerView = view.findViewById(R.id.rcv_main_category);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        // RecyclerView Khinh Dị
+        rcvHorrifiedBook = view.findViewById(R.id.rcv_book_detective_horrified);
+        rcvHorrifiedBook.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
+        // RecyclerView Ngôn tình
+        rcvBookTC = view.findViewById(R.id.rcv_books);
+        rcvBookTC.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        // RecyclerView Marketing
+        rcvMarketingBook = view.findViewById(R.id.rcv_book_marketing);
+        rcvMarketingBook.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        // RecyclerView Author
+        rcvAuthor = view.findViewById(R.id.rcv_author);
+        rcvAuthor.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         // data cate ("Ae đẩy dữ liệu vào đây -> Category")
         dataList = new ArrayList<>(Arrays.asList(
                 "Sách Điện Tử", "Sách Nói", "Chuyện Tranh",
@@ -62,8 +83,8 @@ public class HomeFragment extends Fragment {
         categoryAdapter = new CategoryAdapter(dataList);
         recyclerView.setAdapter(categoryAdapter);
         // ====================================================
+        // Sách Ngôn Tình
 
-        rcvBookTC = view.findViewById(R.id.rcv_books);
         Book book1 = new Book();
         book1.setName("The Alchemist");
         book1.setImg(R.drawable.book1);
@@ -90,9 +111,31 @@ public class HomeFragment extends Fragment {
         bookList.add(book4);
         bookList.add(book5);
 
-        rcvBookTC.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         bookAdapter = new BookAdapter(bookList);
         rcvBookTC.setAdapter(bookAdapter);
+
+        bookHorrifiedAdapter = new BookAdapter(bookList);
+        rcvHorrifiedBook.setAdapter(bookHorrifiedAdapter);
+
+        bookMarketingAdapter = new BookAdapter(bookList);
+        rcvMarketingBook.setAdapter(bookMarketingAdapter);
+
+        Author author1 = new Author("Nguyễn Nhật Ánh", R.drawable.au1);
+        Author author2 = new Author("Tô Hoài", R.drawable.au2);
+        Author author3 = new Author("Nam Cao", R.drawable.au3);
+        Author author4 = new Author("Xuân Quỳnh", R.drawable.au4);
+        Author author5 = new Author("Nguyễn Huy Thiệp", R.drawable.au5);
+        List<Author> authorList = new ArrayList<>();
+
+        authorList.add(author1);
+        authorList.add(author2);
+        authorList.add(author3);
+        authorList.add(author4);
+        authorList.add(author5);
+
+        authorAdapter = new AuthorAdapter(authorList);
+        rcvAuthor.setAdapter(authorAdapter);
+        // =====================================================
 
         // =====================================================
         // ViewPager2
@@ -160,8 +203,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
-        sliderHandler.postDelayed(sliderRunnable, 3000);
+        sliderHandler.postDelayed(sliderRunnable, 4000);
     }
     private int getAverageColor(Bitmap bitmap) {
         long redBucket = 0;
@@ -192,12 +234,8 @@ public class HomeFragment extends Fragment {
                 int defaultColor = ContextCompat.getColor(requireContext(), android.R.color.black);
                 int dominantColor = palette.getDominantColor(defaultColor);
                 int averageColor = getAverageColor(bitmap);
-
-
-                // Màu bắt đầu: màu chủ đạo ảnh, thêm alpha nhẹ
                 int startColor = addAlpha(dominantColor, 200); // 200 = ~78% độ mờ
 
-                // Màu kết thúc: #101318
                 int endColor = android.graphics.Color.parseColor("#101318");
 
                 // Gradient từ trên xuống dưới
