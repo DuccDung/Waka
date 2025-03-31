@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.waka.Model.Book;
+import com.example.waka.OpenBook.BookDetailAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

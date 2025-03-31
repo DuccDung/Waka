@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nền sao chưa chọn -->
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/ic_star" />
+
+    <!-- Sao được chọn một phần (cho rating 3.5 chẳng hạn) -->
+    <item android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/ic_star" />
+
+    <!-- Sao được chọn đầy đủ -->
+    <item android:id="@android:id/progress"
+        android:drawable="@drawable/ic_star" />
+</layer-list>

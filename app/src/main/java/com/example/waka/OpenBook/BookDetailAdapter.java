@@ -1,4 +1,4 @@
-package com.example.waka;
+package com.example.waka.OpenBook;
 
 
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.waka.Model.Book;
+import com.example.waka.R;
 
 import java.util.List;
 

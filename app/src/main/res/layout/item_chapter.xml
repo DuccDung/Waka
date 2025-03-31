@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#121212"
+    android:gravity="center_vertical">
+
+    <!-- Số thứ tự chương -->
+    <TextView
+        android:id="@+id/chapter_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Tiêu đề chương -->
+    <TextView
+        android:id="@+id/chapter_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Chương 1: Xin lỗi, gia phả nhà tao không có mày"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <!-- Nhãn FREE -->
+    <TextView
+        android:id="@+id/chapter_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FREE"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/bg_label_free"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp" />
+</LinearLayout>
