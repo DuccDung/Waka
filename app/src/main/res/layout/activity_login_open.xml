@@ -1,0 +1,138 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. Ảnh nền -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_background_login" />
+
+    <!-- 2. Gradient đen phủ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_overlay_login" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_overlay_login" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_overlay_login" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_overlay_login" />
+
+    <!-- 3. Nội dung -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center" >
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chào mừng bạn đến với "
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/welcome_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waka"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/logo"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản cá nhân"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Bạn cần đăng nhập trước khi sử dụng tính năng này để đảm bảo việc đồng bộ dữ liệu của tài khoản trên nhiều thiết bị"
+                android:textColor="#AFAEAE"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login_open"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_button_upgrade"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="ĐĂNG NHẬP"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            >
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Hủy bỏ"
+               android:gravity="center"
+               android:textColor="#02c18e"
+               android:textSize="17sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
