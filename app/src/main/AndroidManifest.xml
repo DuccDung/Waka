@@ -25,7 +25,7 @@
             android:name=".Author.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".OpenBook.OpenBookActivity"
+            android:name=".Comment.ReviewActivity"
             android:exported="false" />
         <activity
             android:name=".Book.ActivityBook"
@@ -37,7 +37,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Comment.ReviewActivity"
+            android:name=".OpenBook.OpenBookActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
