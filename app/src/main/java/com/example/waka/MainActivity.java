@@ -68,4 +68,5 @@ public class MainActivity extends AppCompatActivity {
             getWindow().setNavigationBarColor(getResources().getColor(R.color.white));
         }
     }
+
 }

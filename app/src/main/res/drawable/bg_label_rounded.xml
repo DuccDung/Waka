@@ -1,0 +1,6 @@
+<!-- res/drawable/bg_label_rounded.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#333333" /> <!-- màu nền xám đậm -->
+    <corners android:radius="20dp" /> <!-- bo tròn góc -->
+</shape>
