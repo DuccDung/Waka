@@ -1,0 +1,47 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Nội dung chính -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Bạn đặt layout đang có ở đây (ảnh, tên chương, seekbar, nút...) -->
+    </ScrollView>
+
+    <!-- Bottom Sheet -->
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="#f0f0f0"
+        android:padding="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Đánh giá .20"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+
+        <!-- RecyclerView danh sách đánh giá -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviewRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Nút viết nhận xét -->
+        <Button
+            android:id="@+id/btnWriteReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Viết nhận xét"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

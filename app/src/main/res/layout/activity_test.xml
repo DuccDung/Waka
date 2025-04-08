@@ -1,16 +1,14 @@
 <!-- res/layout/item_review.xml -->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="5dp"
+    android:layout_marginBottom="12dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="#1E1E1E"
     android:elevation="4dp"
-    card_view:cardBackgroundColor="#252525"
-    card_view:cardCornerRadius="9dp"
-    >
+    android:radius="16dp">
 
     <LinearLayout
-
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_width="match_parent"
