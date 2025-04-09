@@ -13,10 +13,7 @@
         android:theme="@style/Theme.WaKa"
         tools:targetApi="31">
         <activity
-            android:name=".TestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Audio.AudioActivity"
             android:exported="false" />
         <activity
             android:name=".OpenBook.OpenBookActivity"
@@ -46,7 +43,7 @@
             android:name=".RankActivity"
             android:exported="false" />
         <activity
-            android:name=".Audio.AudioActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
