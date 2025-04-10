@@ -1,6 +1,7 @@
 package com.example.waka;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +35,7 @@ import java.util.ArrayList;
 public class UserFragment extends Fragment {
     private BarChart barChart;
     private LineChart lineChart;
+    private TextView btnDeposit;
 
     @SuppressLint("MissingInflatedId")
     @Nullable
@@ -41,9 +45,18 @@ public class UserFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_user, container, false);
-
+        btnDeposit = view.findViewById(R.id.txtDeposit);
         makeStatusBarTransparent();
         applyTopPadding(view);
+
+
+        btnDeposit.setOnClickListener(v -> {
+            if (isAdded()) {
+                Intent intent = new Intent(requireContext(), PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Lấy lineChart từ layout
 //        lineChart = view.findViewById(R.id.lineChart);
@@ -54,6 +67,7 @@ public class UserFragment extends Fragment {
 
         return view;
     }
+
     private void setupBarChart() {
         ArrayList<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(0, 100)); // Vua Một

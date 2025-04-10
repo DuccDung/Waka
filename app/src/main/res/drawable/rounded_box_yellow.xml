@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_box_gray.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E19D16" />
+    <corners android:radius="12dp" />
+</shape>
