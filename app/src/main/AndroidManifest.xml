@@ -22,7 +22,7 @@
             android:name=".Audio.AudioActivity"
             android:exported="false" />
         <activity
-            android:name=".OpenBook.OpenBookActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".CommentActivity"
@@ -49,7 +49,7 @@
             android:name=".RankActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".OpenBook.OpenBookActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

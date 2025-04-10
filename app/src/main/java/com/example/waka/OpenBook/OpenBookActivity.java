@@ -11,18 +11,18 @@ import android.view.View;
 import android.view.Window;
 import android.widget.FrameLayout;
 
-import com.example.waka.LibraryFragment;
 import com.example.waka.Model.Review;
 import com.example.waka.R;
-import com.example.waka.UserFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class OpenBookActivity extends AppCompatActivity {
-    private RecyclerView rcv;
+    private RecyclerView rcvReview;
     private ReviewAdapter reviewAdapter;
+    private RecyclerView rcvComment;
+    private CommentAdapter commentAdapter;
     TabLayout tabLayout;
     FrameLayout contentFrame;
     @Override
@@ -33,9 +33,10 @@ public class OpenBookActivity extends AppCompatActivity {
         makeStatusBarTransparent(); // làm trong suốt status bar
         applyTopPadding();          // tránh đè nội dung lên status bar nếu cần
 
-        rcv= findViewById(R.id.rcv_review_in_open_book);
-        rcv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
+        rcvReview= findViewById(R.id.rcv_review_in_open_book);
+        rcvReview.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rcvComment = findViewById(R.id.rcv_booker_review_in_open_book);
+        rcvComment.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         List<Review> reviewList = new ArrayList<>();
 
@@ -54,7 +55,11 @@ public class OpenBookActivity extends AppCompatActivity {
         reviewList.add(review5);
 
         reviewAdapter = new ReviewAdapter(reviewList);
-        rcv.setAdapter(reviewAdapter);
+        rcvReview.setAdapter(reviewAdapter);
+
+        commentAdapter = new CommentAdapter(reviewList);
+        rcvComment.setAdapter(commentAdapter);
+
 
         // =========================================
         tabLayout = findViewById(R.id.tabLayout);
