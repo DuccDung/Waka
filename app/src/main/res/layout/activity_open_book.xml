@@ -44,7 +44,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imgBarInHome"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="10dp"

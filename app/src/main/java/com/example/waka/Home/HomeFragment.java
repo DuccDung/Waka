@@ -1,5 +1,6 @@
 package com.example.waka.Home;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +24,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.waka.Home.Banner.CarouselTransformer;
 import com.example.waka.Home.Banner.ImageSliderAdapter;
+import com.example.waka.MenuBarInHome.CategoryActivity;
 import com.example.waka.Model.Author;
 import com.example.waka.Model.Book;
 import com.example.waka.R;
@@ -37,6 +40,7 @@ public class HomeFragment extends Fragment {
     private List<String> dataList;
     private ViewPager2 viewPager2;
     private View backgroundView;
+    private ImageView imgBar;
     private final Handler sliderHandler = new Handler();
 
     private RecyclerView rcvBookTC;
@@ -56,6 +60,16 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        // bar
+        imgBar = view.findViewById(R.id.imgBarInHome);
+        imgBar.setOnClickListener(v->{
+            if(requireContext() != null){
+                Intent intent = new Intent(requireContext() , CategoryActivity.class);
+                startActivity(intent);
+            }
+        });
+        //
         // RecyclerView Cate
         recyclerView = view.findViewById(R.id.rcv_main_category);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));

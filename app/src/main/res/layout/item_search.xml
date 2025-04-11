@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@android:color/transparent">
+
+    <!-- Ảnh bìa sách -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+        <ImageView
+            android:id="@+id/imgBookCover"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:src="@drawable/book1"
+            android:scaleType="centerCrop"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Phần nội dung bên phải -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <!-- Tên sách -->
+        <TextView
+            android:id="@+id/tvBookTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toàn thư chiêm tinh học nhập môn"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Loại sách & tác giả -->
+        <TextView
+            android:id="@+id/tvBookInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sách điện tử  •  Joanna Martine Woolfolk"
+            android:textColor="#B0B0B0"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+</LinearLayout>

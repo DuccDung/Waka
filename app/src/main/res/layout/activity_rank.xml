@@ -32,7 +32,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imgBarInHome"
                     android:layout_width="25dp"
                     android:layout_marginLeft="10dp"
                     android:layout_height="28dp"
@@ -50,7 +50,7 @@
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="@+id/imgBarInHome"
                     app:layout_constraintTop_toTopOf="parent" />
 
 

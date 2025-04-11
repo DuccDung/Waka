@@ -28,7 +28,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imgBarInHome"
                 android:layout_width="49dp"
                 android:layout_height="28dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
                 android:textSize="20sp"
                 android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imgBarInHome"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

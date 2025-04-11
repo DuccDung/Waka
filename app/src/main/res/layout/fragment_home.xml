@@ -36,7 +36,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imgBarInHome"
                 android:layout_width="49dp"
                 android:layout_height="28dp"
                 app:layout_constraintBottom_toBottomOf="parent"

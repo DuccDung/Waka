@@ -1,0 +1,25 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Chứng khoán - Bất động sản - Đầu tư"
+        android:textSize="16sp"
+        android:textColor="#D1C9C9" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="NEW"
+        android:gravity="center"
+        android:textSize="11dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_box_red"
+        android:padding="2dp" />
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.waka;
+package com.example.waka.Library;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.waka.Model.Book;
 import com.example.waka.OpenBook.BookDetailAdapter;
+import com.example.waka.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

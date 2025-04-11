@@ -1,4 +1,4 @@
-package com.example.waka;
+package com.example.waka.MenuBarInHome;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -9,27 +9,30 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.waka.Library.LibraryCateAdapter;
+import com.example.waka.R;
+
 import java.util.List;
 
-public class LibraryCateAdapter extends RecyclerView.Adapter<LibraryCateAdapter.CategoryViewHolder> {
+public class CateAdapter extends RecyclerView.Adapter<CateAdapter.CategoryViewHolder>{
 
     private List<String> categories;
     private int selectedPosition = 0;
 
-    public LibraryCateAdapter(List<String> categories) {
+    public CateAdapter (List<String> categories) {
         this.categories = categories;
     }
 
     @NonNull
     @Override
-    public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CateAdapter.CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_cate_library, parent, false);
-        return new CategoryViewHolder(view);
+                .inflate(R.layout.item_cate_bar, parent, false);
+        return new CateAdapter.CategoryViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CateAdapter.CategoryViewHolder holder, int position) {
         String category = categories.get(position);
         holder.tvCategory.setText(category);
 
@@ -54,11 +57,12 @@ public class LibraryCateAdapter extends RecyclerView.Adapter<LibraryCateAdapter.
         return categories.size();
     }
 
+
     static class CategoryViewHolder extends RecyclerView.ViewHolder {
         TextView tvCategory;
         CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvCategory = itemView.findViewById(R.id.tvCategory);
+            tvCategory = itemView.findViewById(R.id.tvCategoryInBar);
         }
     }
 }

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 
 import com.example.waka.Home.HomeFragment;
+import com.example.waka.Library.LibraryFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

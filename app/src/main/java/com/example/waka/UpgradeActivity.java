@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-public class PaymentChooseActivity extends AppCompatActivity {
+public class UpgradeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_choose);
+        setContentView(R.layout.activity_upgrade);
         makeStatusBarTransparent();
         applyTopPadding();
     }
@@ -26,8 +26,7 @@ public class PaymentChooseActivity extends AppCompatActivity {
         window.setStatusBarColor(Color.TRANSPARENT);
     }
     private void applyTopPadding() {
-        View contentContainer = findViewById(R.id.choose_pay);
-
+        View contentContainer = findViewById(R.id.barContainer);
         if (contentContainer != null) {
             int statusBarHeight = getStatusBarHeight();
             contentContainer.setPadding(0, statusBarHeight, 0, 0);
