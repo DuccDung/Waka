@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Tiêu đề vàng -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 xu để mở khoá chapter!"
+        android:textColor="#FFFF00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"/>
+
+    <!-- Nội dung trắng -->
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số xu hiện tại của bạn là 47,451, bạn cần 500 xu để mở khoá chapter này!"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+    <!-- Nút Mở khoá -->
+    <Button
+        android:id="@+id/btnUnlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mở khoá"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#007BFF"
+        android:layout_below="@id/tvContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
