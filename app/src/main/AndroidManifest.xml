@@ -13,13 +13,16 @@
         android:theme="@style/Theme.WaKa"
         tools:targetApi="31">
         <activity
+            android:name=".Author.InfoUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".UpgradeActivity"
             android:exported="false" />
         <activity
             android:name=".SubscriptionActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuBarInHome.SearchActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Payment.PaymentChooseActivity"
@@ -52,21 +55,33 @@
             android:name=".Book.ActivityBook"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".RankActivity"
             android:exported="false" />
         <activity
             android:name=".OpenBook.OpenBookActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Details.DetailActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Payment.ResultPayment"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="vnpay"
+                    android:pathPrefix="/payment-result"
+                    android:scheme="waka" />
             </intent-filter>
         </activity>
     </application>
