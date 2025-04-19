@@ -1,23 +1,27 @@
 package com.example.waka.Book;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.waka.Model.DataPageInBook;
 import com.example.waka.R;
 
 import java.util.List;
 
 public class PageAdapter extends RecyclerView.Adapter<PageAdapter.PageViewHolder> {
 
-    private List<String> pageList;
-
-    public PageAdapter(List<String> pageList) {
-        this.pageList = pageList;
+    private List<DataPageInBook> dataPage;
+    private Context context;
+    public PageAdapter(Context context , List<DataPageInBook> dataPage) {
+        this.dataPage = dataPage;
+        this.context = context;
     }
 
     @NonNull
@@ -29,20 +33,21 @@ public class PageAdapter extends RecyclerView.Adapter<PageAdapter.PageViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull PageViewHolder holder, int position) {
-        holder.textPage.setText(pageList.get(position));
+        ContentPageAdapter contentPageAdapter = new ContentPageAdapter(this.dataPage.get(position).getData());
+        holder.rcv.setAdapter(contentPageAdapter);
     }
 
     @Override
     public int getItemCount() {
-        return pageList.size();
+        return this.dataPage.size();
     }
 
-    static class PageViewHolder extends RecyclerView.ViewHolder {
-        TextView textPage;
-
+    public class PageViewHolder extends RecyclerView.ViewHolder {
+        RecyclerView rcv;
         public PageViewHolder(@NonNull View itemView) {
             super(itemView);
-            textPage = itemView.findViewById(R.id.textPage);
+            rcv = itemView.findViewById(R.id.rcvPageContent);
+            rcv.setLayoutManager(new LinearLayoutManager(rcv.getContext() , LinearLayoutManager.VERTICAL , false));
         }
     }
 }

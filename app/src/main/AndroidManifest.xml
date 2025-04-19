@@ -16,7 +16,7 @@
             android:name=".ChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".Transaction.TransactionActivity"
+            android:name=".Book.ActivityBook"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -60,9 +60,6 @@
             android:exported="false" />
         <activity
             android:name=".Comment.ReviewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Book.ActivityBook"
             android:exported="false" />
         <activity
             android:name=".RankActivity"

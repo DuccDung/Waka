@@ -5,12 +5,8 @@
     android:padding="24dp"
     android:background="#FFFBEA">
 
-    <TextView
-        android:id="@+id/textPage"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvPageContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nội dung trang..."
-        android:textSize="18sp"
-        android:textColor="#333333"
-        android:lineSpacingExtra="6dp" />
+        android:layout_height="match_parent" />
 </FrameLayout>
