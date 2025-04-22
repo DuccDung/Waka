@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
     <LinearLayout
-        android:id="@+id/read_book_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -30,10 +29,11 @@
             app:tabSelectedTextColor="#FFFFFF"
             app:tabTextColor="#BBEED7"
             android:background="#00C081" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcv_chapter_in_read_book"
+        <FrameLayout
+            android:id="@+id/frame_layout_in_chapter"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+        </FrameLayout>
     </LinearLayout>
 </LinearLayout>

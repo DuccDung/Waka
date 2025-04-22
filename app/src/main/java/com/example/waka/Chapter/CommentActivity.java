@@ -1,4 +1,4 @@
-package com.example.waka;
+package com.example.waka.Chapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+
+import com.example.waka.R;
 
 public class CommentActivity extends AppCompatActivity {
 

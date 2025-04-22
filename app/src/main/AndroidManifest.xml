@@ -16,7 +16,7 @@
             android:name=".ChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".Book.ActivityBook"
+            android:name=".Chapter.ChapterActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
