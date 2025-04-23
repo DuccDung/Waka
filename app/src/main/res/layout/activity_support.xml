@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_in_support"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#212121"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#212121"
+            android:elevation="4dp"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Liên hệ hỗ trợ"
+            app:titleTextColor="#FFFFFF" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#212121"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="#B0B0B0">
+            <!-- Tab items -->
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đang mở" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đã đóng" />
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayoutInSupport"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createRequestButton"
+            android:layout_width="124dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button"
+            android:text="Tạo yêu cầu"
+            android:textColor="#FFFFFF"
+            android:padding="5dp"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#29454444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#66121212"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Liên hệ hỗ trợ"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Mô tả -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Vui lòng đọc Những câu hỏi thường gặp trước khi liên hệ"
+                android:textColor="#B0B0B0"
+                android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/readButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:text="Để tôi đọc"
+                    android:textColor="#FF0000" />
+
+                <Button
+                    android:id="@+id/doneButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:text="Tôi đã đọc"
+                    android:textColor="#AFA0A0" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4B4949"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="16dp"
+            android:gravity="center"
+            android:text="Bạn cần hỗ trợ hay báo cáo vấn đề gì?"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <!-- Nhóm lựa chọn RadioButton -->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Báo lỗi nạp khoai"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/radioFunctionError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Báo lỗi chức năng của web hoặc app"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/radioOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yêu cầu hoặc liên hệ khác"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_background"
+            android:hint="Vui lòng cung cấp thông tin chi tiết lỗi gặp phải..."
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:textColor="#D9D2D2"
+            android:textColorHint="#D9D2D2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_upgrade"
+            android:text="Gửi"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Các vấn đề liên quan tôi vi phạm bản quyền vui lòng email contact@lonoapp.net"
+            android:textColor="#B0B0B0"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,8 +25,8 @@ public class Comment {
     @SerializedName("userId")
     private String userId;
 
-    @SerializedName("account")
-    private Object account;
+    @SerializedName("user")
+    private User user;
 
     public int getId() {
         return id;
@@ -76,12 +76,12 @@ public class Comment {
         this.userId = userId;
     }
 
-    public Object getAccount() {
-        return account;
+    public User getUser() {
+        return user;
     }
 
-    public void setAccount(Object account) {
-        this.account = account;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
 

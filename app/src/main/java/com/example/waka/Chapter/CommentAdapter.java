@@ -4,12 +4,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.waka.Model.ApiResponse;
 import com.example.waka.Model.Comment;
 import com.example.waka.R;
@@ -45,7 +47,16 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.itemHold
     @Override
     public void onBindViewHolder(@NonNull itemHolder holder, int position) {
         Comment comment = dataComment.get(position);
-        holder.txtNameUser.setText(comment.getUserId());
+        if(comment.getUser() == null) return;
+
+        Glide.with(holder.imgAvt.getContext())
+                .load(comment.getUser().getAvatar())
+                .placeholder(R.drawable.loading_placeholder)
+                .error(R.drawable.error_image)
+                .into(holder.imgAvt);
+
+        holder.txtNameUser.setText(comment.getUser().getFullName());
+
         holder.txtComment.setText(comment.getContent());
         InitData(new DataCallback<Integer>() {
             @Override
@@ -102,6 +113,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.itemHold
         private TextView txtNameUser;
         private TextView txtComment , txtShowCommentChild , txtHideCommentChild , txtReply;
         private RecyclerView rcvCommentChild;
+        private ImageView imgAvt;
 
         public itemHolder(@NonNull View itemView) {
             super(itemView);
@@ -111,6 +123,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.itemHold
             rcvCommentChild = itemView.findViewById(R.id.rcv_comment_member);
             txtHideCommentChild = itemView.findViewById(R.id.txt_hide_comment);
             txtReply = itemView.findViewById(R.id.txtReply);
+            imgAvt = itemView.findViewById(R.id.imgAvatarInComment);
         }
     }
 

@@ -711,7 +711,6 @@
                         android:background="@android:color/transparent"
                         />
 
-                    <!-- Nội dung bên dưới (chọn hiển thị từng tab) -->
                     <FrameLayout
                         android:id="@+id/contentFrame"
                         android:layout_width="match_parent"

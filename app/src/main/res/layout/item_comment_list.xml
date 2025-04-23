@@ -10,7 +10,7 @@
         android:orientation="horizontal"
         android:padding="8dp">
     <ImageView
-        android:id="@+id/imgAvatar"
+        android:id="@+id/imgAvatarInComment"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginEnd="8dp"

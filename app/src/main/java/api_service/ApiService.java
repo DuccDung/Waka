@@ -14,7 +14,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiService {
-    String BASE_URL = "https://61a2-2405-4802-1844-ce20-39ba-7da0-5b32-3b6a.ngrok-free.app/";
+    String BASE_URL = "https://72ad-171-244-65-48.ngrok-free.app/";
     Gson gson = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd HH:mm:ss")
             .create();
